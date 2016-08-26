@@ -1,0 +1,8 @@
+{
+    "extensions": {
+        "portal": [
+            "javascript/Construction.js",
+            "javascript/HelloWorld.Widget.js",
+            "javascript/CreateHelloWorldView.js"]
+    }
+}

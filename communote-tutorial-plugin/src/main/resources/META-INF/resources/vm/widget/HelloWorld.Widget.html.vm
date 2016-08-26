@@ -1,0 +1,18 @@
+##
+## $widgetInstance -> via the widget instance it is possible to access functions and variables of the JavaScript widget object
+##
+#set($widgetInstance = "#jsCurrentWidget()")
+<div class="cn-form-container">
+    <div class="cn-field-50">
+        <label class="cn-label" for="${widget.WidgetId}_message">
+            ## In order to internationalize your code use the helper functions #t(key) and #t_args(key, arguments)
+            #t('plugins.communote.tutorial.widget.HelloWorld.input.label')
+        </label>
+        <input type="text" class="cn-inputTxt" id="${widget.WidgetId}_message" name="${widget.WidgetId}_message" />
+    </div>
+    <div class="cn-buttons">
+        ## Using the widget instance to define an onclick event for the button
+        <input type="button" id="${widget.WidgetId}-show" name="${widget.WidgetId}-show" class="cn-button main"
+               value="#t('plugins.communote.tutorial.widget.HelloWorld.button')" onclick="${widgetInstance}.showSuccessMessage()"/>
+    </div>
+</div>
